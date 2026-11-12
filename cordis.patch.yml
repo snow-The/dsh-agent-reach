@@ -1,0 +1,4 @@
+# dsh-agent-reach — Agent Reach as native DSH tools.
+- insert:
+    - id: dsh-agent-reach
+      name: '@snow-the/dsh-agent-reach'

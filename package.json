@@ -1,0 +1,47 @@
+{
+  "name": "@snow-the/dsh-agent-reach",
+  "version": "0.1.0",
+  "description": "Agent Reach as native DeepSeek Harness tools: read platforms your own search cannot reach (Bilibili, XiaoHongShu, X, Reddit, V2EX, Xueqiu, YouTube, GitHub) plus Exa/Jina web search-read fallback. Read-only, no API keys of our own.",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "agent-reach",
+    "bilibili",
+    "xiaohongshu",
+    "web-search",
+    "reach"
+  ],
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "package.json",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dshReleases": [
+        "0.2.1-rc.5"
+      ],
+      "verifiedAgainst": "0.2.1-rc.5"
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.1-rc.5"
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.5"
+  }
+}
